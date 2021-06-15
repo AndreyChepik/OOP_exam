@@ -9,7 +9,11 @@ def funk():
     for elem in l:
         mult *= elem
 
-    l.sort()
-    return mult, l.sort()
+    print(l)
+    for elem in l.sort(reverse=False):
+        if elem <10:
+            m = elem
+
+    return mult, m
 
 print(funk())
