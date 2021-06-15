@@ -19,7 +19,16 @@ class Subject(object):
 
 class OOP(Subject):
     """Наслідник класу ʼпредметʼ"""
-    def __init__(self):
+    def __init__(self, practise):
         super().__init__(hours=80, is_exam=True)
         """Про функцію super можно розповісти дуже багато. Головне: вона викликає метод next() класу.
         Виконається функція наступного классу за списком MRO, в нашому випадку це Subject. """
+        self.practise = practise
+
+
+s = Subject(120, False)
+o = OOP(True)
+print(s)
+print(o)
+print(o.practise)
+print(o.hours_to_minute())
